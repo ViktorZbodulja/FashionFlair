@@ -147,10 +147,10 @@ body {
 .reveal_img, .reveal_text {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 150%;
   background: #17181a;
   left: 0;
-  top: 0;
+  top: -15%;
 }
 
 .cursor {
@@ -159,4 +159,8 @@ body {
   border: 2px solid white;
   border-radius: 50%;
   position: absolute;
+}
+
+.scrollmagic-pin-spacer {
+  position: static !important;
 }/*# sourceMappingURL=style.css.map */
