@@ -57,5 +57,28 @@ function animateSlides() {
       .addTo(controller);
   });
 }
+let mouse = document.querySelector(".cursor");
+let mouseTxt = mouse.querySelector("span");
+function cursor(e) {
+  mouse.style.top = e.pageY + "px";
+  mouse.style.left = e.pageX + "px";
+}
+function activeCursor(e) {
+  const item = e.target;
+  if (item.id === "logo" || item.classList.contains("burger")) {
+    mouse.classList.add("nav_active");
+  } else {
+    mouse.classList.remove("nav_active");
+  }
+  if (item.classList.contains("explore")) {
+    mouse.classList.add("explore_active");
+    mouseTxt.innerText = "Tap";
+  } else {
+    mouse.classList.remove("explore_active");
+    mouseTxt.innerText = "";
+  }
+}
+window.addEventListener("mousemove", cursor);
+window.addEventListener("mouseover", activeCursor);
 
 animateSlides();

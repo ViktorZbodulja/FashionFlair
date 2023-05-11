@@ -58,9 +58,6 @@ body {
 }
 
 .hero_img {
-  position: relative;
-  flex: 1;
-  flex-basis: 25rem;
   overflow: hidden;
 }
 .hero_img img {
@@ -68,6 +65,13 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  background-color: #17181a;
+}
+
+.hero_container {
+  position: relative;
+  flex: 1;
+  flex-basis: 25rem;
 }
 
 .fashion_span {
@@ -75,11 +79,11 @@ body {
 }
 
 .mountain_span {
-  color: rgb(86, 124, 228);
+  color: rgb(255, 139, 93);
 }
 
 .hike_span {
-  color: rgb(167, 110, 231);
+  color: rgb(240, 73, 70);
 }
 
 .hero_desc h2 {
@@ -159,6 +163,29 @@ body {
   border: 2px solid white;
   border-radius: 50%;
   position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+  transition-property: background, transform;
+  transform-origin: 75% 75%;
+}
+
+.cursor.nav_active {
+  background: rgb(86, 124, 228);
+  transform: scale(3);
+}
+
+.cursor.explore_active {
+  background: white;
+  transform: scale(3);
+}
+
+.cursor_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 0.5rem;
+  transform: translate(-50%, -50%);
 }
 
 .scrollmagic-pin-spacer {
