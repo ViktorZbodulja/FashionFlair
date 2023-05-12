@@ -25,6 +25,8 @@ body {
   width: 80%;
   margin: auto;
   padding: 2rem 0rem;
+  z-index: 2;
+  position: relative;
 }
 
 .line1, .line2 {
@@ -83,7 +85,7 @@ body {
 }
 
 .hike_span {
-  color: rgb(240, 73, 70);
+  color: rgb(238, 105, 103);
 }
 
 .hero_desc h2 {
@@ -188,6 +190,37 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.title {
+  position: relative;
+  overflow: hidden;
+}
+
+.title_swipe {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  mix-blend-mode: darken;
+  transform: translateY(100%);
+}
+
+.t_swipe1 {
+  background: rgb(255, 139, 93);
+}
+
+.t_swipe2 {
+  background: rgb(238, 105, 103);
+}
+
+.t_swipe3 {
+  background: rgb(255, 139, 93);
+}
+
 .scrollmagic-pin-spacer {
   position: static !important;
+}
+
+body.hide {
+  overflow: hidden;
 }/*# sourceMappingURL=style.css.map */
