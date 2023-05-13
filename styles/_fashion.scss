@@ -1,0 +1,52 @@
+.fashion1, .fashion2, .fashion3 {
+    min-height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    color: white;
+    margin-top: 5rem;
+    position: relative;
+}
+.fashion_img {
+    height: 70vh;
+    flex-basis: 30rem;
+}
+.fashion_text {
+    flex: 1;
+    position: relative;
+    flex-basis: 25rem;
+    h1 {
+        font-size: 3.5rem;
+        padding: 5rem 0rem;
+    }
+    p {
+        font-size: 1.5rem;
+        padding: 2rem 2rem 0rem 0rem;
+        margin-bottom: 10rem;
+    }
+}
+.fashion_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.fashion1 h1 {
+    color: rgb(222, 135, 58);
+}
+.fashion2 h1 {
+    color: rgb(212, 82, 50);
+}
+.fashion3 h1 {
+    color: rgb(210, 132, 68);
+}
+.fashion_nr {
+    font-size: 12rem;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    color: white;
+    opacity: 0.4;
+}
