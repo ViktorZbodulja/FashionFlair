@@ -7,6 +7,10 @@ body {
     background: #17181a;
     font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
+    position: relative;
+}
+main {
+    position: absolute;
 }
 #logo {
     color: white;
@@ -142,8 +146,8 @@ body {
     
 }
 .cursor {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     border: 2px solid white;
     border-radius: 50%;
     position: absolute;
@@ -166,7 +170,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 0.5rem;
+    font-size: 0.4rem;
     transform: translate(-50%, -50%);
 }
 .title {
