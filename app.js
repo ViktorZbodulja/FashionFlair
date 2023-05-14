@@ -1,6 +1,7 @@
 let controller;
 let slideScene;
 let pageScene;
+let detailScene;
 
 function animateSlides() {
   //init controller
@@ -118,39 +119,73 @@ barba.init({
       namespace: "fashion",
       beforeEnter() {
         logo.href = "../index.html";
+        detailAnimation();
+      },
+      beforeLeave() {
+        controller.destroy();
+        detailScene.destroy();
       },
     },
   ],
   transitions: [
     {
-      leave({ current, next }) {
+      leave(data) {
         let done = this.async();
         //animation
         const tl = gsap.timeline({ defaults: { ease: "power2inOut" } });
+        tl.fromTo(data.current.container, 1, { opacity: 1 }, { opacity: 0 });
         tl.fromTo(
-          current.container,
-          1,
-          { opacity: 1 },
-          { opacity: 0, onComplete: done }
+          ".swipe",
+          0.75,
+          { x: "-100%" },
+          { x: "0%", onComplete: done },
+          "-=0.5"
         );
       },
-      enter({ current, next }) {
+      enter(data) {
         let done = this.async();
         //scroll to top
         window.scroll(0, 0);
         //animation
         const tl = gsap.timeline({ defaults: { ease: "power2inOut" } });
         tl.fromTo(
-          next.container,
+          ".swipe",
           1,
-          { opacity: 0 },
-          { opacity: 1, onComplete: done }
+          { x: "0%" },
+          { x: "100%", stagger: 0.25, onComplete: done }
         );
+        tl.fromTo(data.next.container, 1, { opacity: 0 }, { opacity: 1 });
       },
     },
   ],
 });
-
+function detailAnimation() {
+  const slides = document.querySelectorAll(".detail_slide");
+  slides.forEach((slide, index, slides) => {
+    const slideTl = gsap.timeline({ defaults: { duration: 1 } });
+    let nextSlide = slides.length - 1 === index ? "end" : slides[index + 1];
+    const nextImg = nextSlide.querySelector("img");
+    slideTl.fromTo(slide, { opacity: 1 }, { opacity: 0 });
+    slideTl.fromTo(nextSlide, { opacity: 0 }, { opacity: 1 }, "-=1");
+    slideTl.fromTo(nextImg, { x: "25%", opacity: 0 }, { x: "0%", opacity: 1 });
+    //ScrollMagic
+    controller = new ScrollMagic.Controller();
+    //create Scene
+    detailScene = new ScrollMagic.Scene({
+      triggerElement: slide,
+      duration: "100%",
+      triggerHook: 0,
+    })
+      .setPin(slide, { pushFollowers: false })
+      .setTween(slideTl)
+      .addIndicators({
+        colorStart: "white",
+        colorTrigger: "white",
+        name: "detailScene",
+      })
+      .addTo(controller);
+  });
+}
 //Event listeners
 burger.addEventListener("click", navToggle);
 window.addEventListener("mousemove", cursor);

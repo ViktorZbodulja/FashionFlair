@@ -230,6 +230,30 @@ body.hide {
   overflow: hidden;
 }
 
+.swipe {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translate(-100%);
+}
+
+.swipe1 {
+  background: rgb(236, 109, 59);
+  z-index: 5;
+}
+
+.swipe2 {
+  background: rgb(227, 66, 63);
+  z-index: 4;
+}
+
+.swipe3 {
+  background: rgb(154, 15, 159);
+  z-index: 3;
+}
+
 .fashion1, .fashion2, .fashion3 {
   min-height: 90vh;
   display: flex;
