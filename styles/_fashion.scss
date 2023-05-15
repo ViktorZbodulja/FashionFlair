@@ -13,6 +13,10 @@
 .fashion_img {
     height: 70vh;
     flex-basis: 30rem;
+    img{
+        border-radius: 5px 5px 5px 5px;
+    }
+    
 }
 .fashion_text {
     flex: 1;

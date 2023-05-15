@@ -76,7 +76,12 @@ main {
   background-color: #17181a;
 }
 
+.model3 {
+  border-radius: 0rem 0rem 20rem 20rem;
+}
+
 .home_img {
+  border-radius: 15px;
   overflow: hidden;
 }
 .home_img img {
@@ -283,6 +288,9 @@ body.hide {
   height: 70vh;
   flex-basis: 30rem;
 }
+.fashion_img img {
+  border-radius: 5px 5px 5px 5px;
+}
 
 .fashion_text {
   flex: 1;
@@ -379,6 +387,9 @@ body.hide {
     font-size: 1rem;
     line-height: 1.5rem;
     text-align: center;
+  }
+  .reveal_text {
+    position: relative;
   }
   .hero_img, .home_img {
     padding-top: 4rem;
