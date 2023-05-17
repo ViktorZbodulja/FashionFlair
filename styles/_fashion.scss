@@ -54,3 +54,15 @@
     color: white;
     opacity: 0.4;
 }
+.detail_img {
+    width: 100%;
+    
+    img {
+        object-fit: cover;
+        height: 90vh;
+        width: 100%;
+        
+    }
+   
+   
+}

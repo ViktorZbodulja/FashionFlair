@@ -335,6 +335,16 @@ body.hide {
   opacity: 0.4;
 }
 
+.detail_img {
+  width: 100%;
+}
+.detail_img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 90vh;
+  width: 100%;
+}
+
 @media screen and (max-width: 1500px) {
   .home_img .hero_img {
     height: 70vh;
