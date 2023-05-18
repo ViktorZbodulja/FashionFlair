@@ -54,15 +54,40 @@
     color: white;
     opacity: 0.4;
 }
-.detail_img {
+.model_img {
     width: 100%;
-    
     img {
         object-fit: cover;
         height: 90vh;
         width: 100%;
         
+    }  
+}
+.model_section {
+    position: relative;
+    font-family: "Abril Fatface";
+    
+    img {
+        height: 80vh;
     }
-   
-   
+    
+    p {
+        position: absolute;
+        padding: 0rem 2rem;
+        font-size: 1.4rem; 
+        width: 45%;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        top: 45%;
+        right: 0%;
+    }
+}
+.model_text {
+    position: absolute;
+    width: 45%;
+    top: 5%;
+    right: 0%;
+    color: white;
+    font-size: 3rem;  
+    padding: 0rem 2rem; 
 }
