@@ -373,6 +373,10 @@ body.hide {
   padding: 0rem 2rem;
 }
 
+.model3_span {
+  color: rgb(249, 84, 34);
+}
+
 @media screen and (max-width: 1500px) {
   .home_img .hero_img {
     height: 70vh;
