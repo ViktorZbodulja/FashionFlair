@@ -161,6 +161,26 @@ barba.init({
           { y: "0%", ease: "power2inOut" },
           "-=1.5"
         );
+        tl.fromTo(
+          ".model_text h2 span",
+          1.2,
+          { opacity: 0, y: "-35%" },
+          { opacity: 1, y: "0%", ease: Power0 }
+        );
+        tl.fromTo(
+          ".model_text h2",
+          1.2,
+          { opacity: 0, y: "-35%" },
+          { opacity: 1, y: "0%", ease: Power0 },
+          "-=1.3"
+        );
+        tl.fromTo(
+          ".detail_slide p",
+          1.5,
+          { opacity: 0 },
+          { opacity: 1, ease: Power0 },
+          "-=0.25"
+        );
       },
     },
   ],
