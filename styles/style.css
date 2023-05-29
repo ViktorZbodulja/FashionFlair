@@ -67,6 +67,7 @@ main {
 .hero_img {
   overflow: hidden;
   border-radius: 0rem 20rem 20rem 0rem;
+  width: 45%;
 }
 .hero_img img {
   width: 100%;
@@ -386,12 +387,14 @@ body.hide {
     padding: 1rem 0rem;
   }
   .fashion_text p {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+    margin-bottom: 6rem;
   }
   .fashion_img img {
-    height: 50vh;
+    height: 100%;
     -o-object-position: top;
        object-position: top;
+    margin-bottom: 3rem;
   }
   .slide {
     overflow: hidden;
@@ -400,6 +403,9 @@ body.hide {
 @media screen and (max-width: 1350px) {
   .title h2 {
     font-size: 3rem;
+  }
+  .model_section p {
+    margin-top: 2rem;
   }
 }
 @media screen and (max-width: 1050px) {
@@ -433,6 +439,16 @@ body.hide {
   .reveal_text {
     position: relative;
   }
+  .model_text {
+    width: 65%;
+  }
+  .model_text h2 {
+    font-size: 3.5rem;
+  }
+  .model_section p {
+    font-size: 1.2rem;
+    width: 60%;
+  }
   .hero_img, .home_img {
     padding-top: 4rem;
   }
@@ -444,7 +460,6 @@ body.hide {
     margin: auto;
   }
   .detail_slide {
-    width: 100%;
     text-align: center;
   }
   .fashion_text p {
@@ -472,5 +487,30 @@ body.hide {
     font-size: 1.2rem;
     padding: 2rem;
     text-align: center;
+  }
+}
+@media screen and (max-width: 855px) {
+  .model_text {
+    width: 85%;
+  }
+  .model_section p {
+    width: 100%;
+  }
+  .nav_links {
+    padding-top: 5rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .model_text h2 {
+    font-size: 2.5rem;
+  }
+  .model_section p {
+    font-size: 1.2rem;
+  }
+  .contact h2 {
+    font-size: 2.5rem;
+  }
+  .nav_header {
+    width: 90%;
   }
 }/*# sourceMappingURL=style.css.map */

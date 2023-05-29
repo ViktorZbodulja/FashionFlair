@@ -59,6 +59,7 @@ main {
 .hero_img {
     overflow: hidden;
     border-radius: 0rem 20rem 20rem 0rem;
+    width: 45%;
     img {
         width: 100%;
         height: 100%;
@@ -79,7 +80,6 @@ main {
         background-color: #17181a;
     }
 }
-
 .hero_container {
     position: relative;
     flex: 1;
