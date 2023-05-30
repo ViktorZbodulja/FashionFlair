@@ -3,6 +3,7 @@ let slideScene;
 let pageScene;
 let detailScene;
 
+//home slide anim
 function animateSlides() {
   //init controller
   controller = new ScrollMagic.Controller();
@@ -21,6 +22,7 @@ function animateSlides() {
     slideTl.fromTo(revealImg, { x: "0%" }, { x: "100%" });
     slideTl.fromTo(img, { scale: 2 }, { scale: 1 }, "-=1");
     slideTl.fromTo(revealText, { x: "0%" }, { x: "100%" }, "-=0.75");
+    slideTl.fromTo(nav, { y: "-100%" }, { y: "0%" }, "-=0.5");
     //create Scene
     slideScene = new ScrollMagic.Scene({
       triggerElement: slide,
@@ -185,10 +187,11 @@ barba.init({
     },
   ],
 });
+//subpage scroll anim
 function detailAnimation() {
   const slides = document.querySelectorAll(".detail_slide");
   slides.forEach((slide, index, slides) => {
-    const slideTl = gsap.timeline({ defaults: { duration: 1 } });
+    const slideTl = gsap.timeline({ defaults: { duration: 0.9 } });
     let nextSlide = slides.length - 1 === index ? "end" : slides[index + 1];
     const nextImg = nextSlide.querySelector("img");
     slideTl.fromTo(slide, { opacity: 1 }, { opacity: 0 });

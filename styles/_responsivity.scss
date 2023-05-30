@@ -77,8 +77,9 @@
     }
     .hero_img {
         border-radius: 0rem;
+        min-height: 50vh;
+        width: 100%;
     }
-
     .explore {
         width: 60%;
         margin: auto;
@@ -124,11 +125,31 @@
        
     }
     .model_section p {
-        
         width: 100%;
+        margin-top: 12rem;
     }
     .nav_links {
         padding-top: 5rem;
+    }
+    .fashion_text p {
+        font-size: 1.4rem;
+    }
+    .hero_img {
+        height: 75vh;
+    }   
+}
+@media screen and (max-width: 500px){
+    .nav_links {
+        font-size: 2rem;
+        h3 {
+            padding: 2rem 0rem;
+        }
+    }
+    .contact h2 {
+        font-size: 2.6rem;
+    }
+    .hero_img {
+        height: 40vh;
     }
 }
 @media screen and (max-width: 350px) {
