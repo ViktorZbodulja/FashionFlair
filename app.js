@@ -191,7 +191,7 @@ barba.init({
 function detailAnimation() {
   const slides = document.querySelectorAll(".detail_slide");
   slides.forEach((slide, index, slides) => {
-    const slideTl = gsap.timeline({ defaults: { duration: 0.9 } });
+    const slideTl = gsap.timeline({ defaults: { duration: 1 } });
     let nextSlide = slides.length - 1 === index ? "end" : slides[index + 1];
     const nextImg = nextSlide.querySelector("img");
     slideTl.fromTo(slide, { opacity: 1 }, { opacity: 0 });
@@ -209,7 +209,6 @@ function detailAnimation() {
       { x: "0%", opacity: 1 },
       "-=1.3"
     );
-
     //ScrollMagic
     controller = new ScrollMagic.Controller();
     //create Scene

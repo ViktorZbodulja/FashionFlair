@@ -121,8 +121,7 @@
 }
 @media screen and (max-width: 855px) {
     .model_text {
-        width: 85%;
-       
+        width: 85%;  
     }
     .model_section p {
         width: 100%;
@@ -131,12 +130,19 @@
     .nav_links {
         padding-top: 5rem;
     }
+    .fashion_img {
+        height: 60vh;
+    }
     .fashion_text p {
         font-size: 1.4rem;
     }
     .hero_img {
         height: 75vh;
     }   
+    .fashion_text p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
 }
 @media screen and (max-width: 500px){
     .nav_links {
